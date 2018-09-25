@@ -9,5 +9,10 @@ class Pet(db.Model):
     lat = db.Column(db.Float)
     lon = db.Column(db.Float)
 
+    def __init__(self,name,lat,lon):
+        self.name = name
+        self.lat = lat
+        self.lon = lon
+
     def __repr__(self):
         return '<Pet %r>' % (self.name)
